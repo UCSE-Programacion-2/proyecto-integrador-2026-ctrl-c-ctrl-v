@@ -1,0 +1,46 @@
+name: "Conventional Commits Check"
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate commit messages
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          REGEX: '^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert)\([a-z0-9-]+\)(!)?: .+'
+        run: |
+          echo "Validando commits entre:"
+          echo "BASE_SHA=$BASE_SHA"
+          echo "HEAD_SHA=$HEAD_SHA"
+
+          INVALID=0
+
+          # Trae los subjects (1 línea) de cada commit.
+          while IFS= read -r msg; do
+            # Ignorar commits automáticos / merges
+            if [[ "$msg" =~ ^Merge\ .* ]] || [[ "$msg" =~ ^Revert\ .* ]] || [[ "$msg" =~ ^Automatic\ merge.* ]]; then
+              continue
+            fi
+
+            echo "$msg" | grep -Eq "$REGEX"
+            if [ $? -ne 0 ]; then
+              echo "ERROR: Commit inválido: $msg"
+              echo "Formato requerido: type(scope)!: subject"
+              INVALID=1
+            fi
+          done < <(git log --format=%s "$BASE_SHA..$HEAD_SHA")
+
+          if [ "$INVALID" -ne 0 ]; then
+            exit 1
+          fi
+

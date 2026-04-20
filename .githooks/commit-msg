@@ -1,0 +1,32 @@
+#!/bin/sh
+
+HOOK_FILE="$0"
+COMMIT_MSG_FILE="$1"
+
+# Si el hook no recibió archivo, no podemos validar
+if [ -z "$COMMIT_MSG_FILE" ]; then
+  exit 0
+fi
+
+COMMIT_MSG="$(cat "$COMMIT_MSG_FILE" | head -n 1)"
+
+# Ignorar commits automáticos generados por GitHub/Git
+case "$COMMIT_MSG" in
+  Merge\ *|Revert\ *|Automatic\ merge*) exit 0 ;;
+esac
+
+# Conventional Commits:
+# type(scope)!: subject
+REGEX='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert)\([a-z0-9-]+\)(!)?: .+'
+
+echo "$COMMIT_MSG" | grep -Eq "$REGEX"
+if [ $? -ne 0 ]; then
+  echo "ERROR: El mensaje de commit no cumple Conventional Commits."
+  echo "Formato requerido: type(scope)!: subject"
+  echo "Ejemplo: feat(ui-home): agrega banner principal"
+  echo "Tu mensaje: $COMMIT_MSG"
+  exit 1
+fi
+
+exit 0
+

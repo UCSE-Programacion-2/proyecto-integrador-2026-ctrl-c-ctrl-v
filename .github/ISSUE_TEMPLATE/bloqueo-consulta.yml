@@ -1,0 +1,51 @@
+name: "Bloqueo / Consulta Técnica"
+description: "Para pedir ayuda cuando una tarea del sprint queda bloqueada"
+title: "[Bloqueo] "
+labels: ["help wanted", "P0 — crítico"]
+assignees: []
+body:
+  - type: dropdown
+    id: sprint
+    attributes:
+      label: Sprint
+      options:
+        - Sprint 0
+        - Sprint 1
+        - Sprint 2
+        - Sprint 3
+        - Sprint 4
+    validations:
+      required: true
+
+  - type: input
+    id: related-issue
+    attributes:
+      label: Issue relacionado
+      description: "Número de issue que quedó bloqueado"
+      placeholder: "#45"
+    validations:
+      required: true
+
+  - type: textarea
+    id: blocker
+    attributes:
+      label: ¿Qué bloquea exactamente?
+      placeholder: "Describí el problema y dónde se frena el avance"
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: ¿Qué intentaste?
+      placeholder: "Pasos ya probados, links, logs, capturas"
+    validations:
+      required: true
+
+  - type: textarea
+    id: needed-help
+    attributes:
+      label: Tipo de ayuda que necesitás
+      placeholder: "Ej: revisión de endpoint, conflicto git, CORS, modelado"
+    validations:
+      required: true

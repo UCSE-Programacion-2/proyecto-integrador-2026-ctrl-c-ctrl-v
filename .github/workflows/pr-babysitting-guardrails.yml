@@ -1,0 +1,43 @@
+name: "PR Babysitting Guardrails"
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  validate-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validar plantilla minima del PR
+        shell: bash
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -e
+          BODY_FILE="$(mktemp)"
+          printf "%s" "$PR_BODY" > "$BODY_FILE"
+
+          ERRORS=0
+
+          if ! grep -Eq 'Closes #[0-9]+' "$BODY_FILE"; then
+            echo "ERROR: Falta 'Closes #N' en el cuerpo del PR."
+            ERRORS=1
+          fi
+
+          if ! grep -Eq 'Sprint [0-4]' "$BODY_FILE"; then
+            echo "ERROR: Falta informar el Sprint en la seccion de vinculacion."
+            ERRORS=1
+          fi
+
+          if ! grep -Eq '#[0-9]+' "$BODY_FILE"; then
+            echo "ERROR: Falta referencia de Issue/Tarjeta."
+            ERRORS=1
+          fi
+
+          if [ "$ERRORS" -ne 0 ]; then
+            echo "Corregi la descripcion del PR usando el template del repositorio."
+            exit 1
+          fi
+
+          echo "OK: PR con trazabilidad minima para babysitting."

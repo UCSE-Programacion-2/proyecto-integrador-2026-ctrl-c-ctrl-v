@@ -1,0 +1,32 @@
+name: "Épica"
+description: "Issue de alto nivel que agrupa historias de usuario"
+title: "[ÉPICA] E# — "
+labels: ["epic"]
+assignees: []
+body:
+  - type: textarea
+    id: epic-goal
+    attributes:
+      label: Objetivo de la Épica
+      placeholder: "¿Qué problema de negocio resuelve esta épica?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance esperado
+      description: "Lista de historias que debería contener esta épica"
+      value: |
+        - HU-XX —
+        - HU-XX —
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Fuera de alcance
+      placeholder: "Qué no se incluirá en esta épica"
+    validations:
+      required: false

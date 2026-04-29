@@ -5,7 +5,7 @@ Tablero de GitHub Projects: [Link a tu tablero]
 ## 👥 Integrantes
 * Campos Matias - https://github.com/mat1asz
 * Karen Nicole Martinez - https://github.com/NicolMar
-* **Apellido, Nombre** - [GitHub Profile](link)
+* Garnica Marcos Farid - https://github.com/Farid-cr
 
 ## 🏢 Cliente Real Elegido
 * **Nombre:** [Nombre del Comercio en Jujuy]

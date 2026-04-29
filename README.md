@@ -14,6 +14,7 @@ Ctrl C + Ctrl V
 * **Nombre:** "Prendas gauchas Demetria"
 * **Rubro:** Indumentaria tradicional / ropa gaucha
 * **Justificación:** El comercio seleccionado es una tienda real de indumentaria gaucha, lo que garantiza su existencia y acceso a productos físicos. El catálogo presenta múltiples categorías, tales como bombachas de gaucho, camisas, sombreros, botas y accesorios. Además, los productos poseen atributos relevantes como talle, color, precio, stock, material, descripción e imagen, lo que justifica el uso de una base de datos. El negocio requiere gestionar su inventario, permitiendo la implementación de un sistema CRUD completo para la creación, edición, eliminación y visualización de productos.
+* Ubicacion: Vicuña y pinos 305 B°Chijra 4600 San Salvador de Jujuy, Argentina
 
 ## 📝 Reglas de Contribución
 * Uso de Git Flow.

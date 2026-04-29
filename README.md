@@ -3,14 +3,14 @@ Tablero de GitHub Projects: [Link a tu tablero]
 # [Nombre del Proyecto / Equipo] - Programación II 2026
 
 ## 👥 Integrantes
-* **Apellido, Nombre** - [GitHub Profile](link)
-* **Apellido, Nombre** - [GitHub Profile](link)
+* Campos Matias - https://github.com/mat1asz
+* Karen Nicole Martinez - https://github.com/NicolMar
 * **Apellido, Nombre** - [GitHub Profile](link)
 
 ## 🏢 Cliente Real Elegido
 * **Nombre:** [Nombre del Comercio en Jujuy]
-* **Rubro:** [Ej: Indumentaria Deportiva]
-* **Justificación:** [Explicar brevemente por qué el catálogo es apto para un CRUD]
+* **Rubro:** Indumentaria tradicional / ropa gaucha
+* **Justificación:** El comercio seleccionado es una tienda real de indumentaria gaucha, lo que garantiza su existencia y acceso a productos físicos. El catálogo presenta múltiples categorías, tales como bombachas de gaucho, camisas, sombreros, botas y accesorios. Además, los productos poseen atributos relevantes como talle, color, precio, stock, material, descripción e imagen, lo que justifica el uso de una base de datos. El negocio requiere gestionar su inventario, permitiendo la implementación de un sistema CRUD completo para la creación, edición, eliminación y visualización de productos.
 
 ## 📝 Reglas de Contribución
 * Uso de Git Flow.

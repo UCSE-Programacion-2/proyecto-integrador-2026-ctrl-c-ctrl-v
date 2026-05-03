@@ -17,20 +17,22 @@ Productos con atributos variables (talle, color, material, precio, stock)
 Necesidad de gestión de productos (CRUD)
 Atención presencial, sin sistema digital de ventas
 Posibilidad de expansión a ventas online
-📸 Fotos del negocio
 
-Las imágenes incluidas representan:
+## 📸 Fotos del negocio
 
-Zona de exhibición de productos
-Variedad de prendas disponibles
-Detalles de productos (telas, costuras)
-Organización del local
-Cartelería o identidad visual
-🎨 Logo
+Las imágenes se encuentran en la carpeta `fotos/` y representan:
 
-Se incluye el logo del comercio en la carpeta correspondiente.
+| Archivo | Descripción |
+| `catalogoParte1.jpg` | Primera parte del catálogo de productos disponibles |
+| `catalogoParte2.jpg` | Segunda parte del catálogo de productos disponibles |
+| `catalogoParte3.jpg` | Tercera parte del catálogo de productos disponibles |
+| `entrada.jpg` | Entrada principal del local comercial |
+| `interiorComercio.jpg` | Vista general del interior del comercio |
+| `sectorPonchos-bombachaGa.jpg` | Sector de ponchos y bombachas de gaucho |
+| `zonaDeAtencion.jpg` | Zona de atención al cliente |
 
-En caso de no contar con un logo oficial, se propone una versión inicial basada en:
+Se incluye el logo oficial del comercio en la carpeta `logo/`.
+El archivo fue obtenido desde las redes sociales oficiales del negocio (Instagram/Facebook).
 
 Colores tradicionales (marrón, beige, negro)
 Estilo rústico acorde a la temática gaucha

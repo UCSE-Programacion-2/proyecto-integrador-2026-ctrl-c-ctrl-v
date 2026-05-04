@@ -28,6 +28,7 @@ Ctrl C + Ctrl V
 * Rúbrica de evaluación: `docs/sprint-review/sprint-review-rubrica.md`
 * Checklist estudiantes: `docs/sprint-review/sprint-review-checklist-estudiantes.md`
 * Checklist docentes: `docs/sprint-review/sprint-review-checklist-docentes.md`
+- Video Sprint Review Sprint 0: https://drive.google.com/file/d/16ZKLH1F6S5218l9aGow6blzooLXCGeGn/view?usp=sharing
 
 ## 🚀 Deploy y evidencias (Sprint 4)
 * **URL de Producción Frontend:** *Próximamente*

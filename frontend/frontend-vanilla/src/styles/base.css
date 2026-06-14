@@ -1,0 +1,144 @@
+/* reset y estilos base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--texto-base);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+  transition: color var(--transicion);
+}
+
+a:hover {
+  color: var(--color-acento);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-titulo);
+  line-height: 1.2;
+  color: var(--color-primario);
+}
+
+/* contenedor centrado */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 var(--espacio-4);
+}
+
+/* botones */
+.boton {
+  display: inline-block;
+  padding: var(--espacio-3) var(--espacio-6);
+  border-radius: var(--radio-md);
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--texto-base);
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition:
+    background-color var(--transicion),
+    color var(--transicion),
+    border-color var(--transicion);
+  text-align: center;
+}
+
+.boton-primario {
+  background-color: var(--color-primario);
+  color: #fff;
+  border-color: var(--color-primario);
+}
+
+.boton-primario:hover {
+  background-color: var(--color-primario-oscuro);
+  border-color: var(--color-primario-oscuro);
+  color: #fff;
+}
+
+.boton-secundario {
+  background-color: transparent;
+  color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.boton-secundario:hover {
+  background-color: var(--color-primario);
+  color: #fff;
+}
+
+.boton-acento {
+  background-color: var(--color-acento);
+  color: var(--color-primario-oscuro);
+  border-color: var(--color-acento);
+}
+
+.boton-acento:hover {
+  background-color: var(--color-acento-claro);
+  border-color: var(--color-acento-claro);
+}
+
+/* etiqueta de precio */
+.precio {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-xl);
+  color: var(--color-primario);
+  font-weight: 700;
+}
+
+/* badge de categoría */
+.etiqueta {
+  display: inline-block;
+  padding: var(--espacio-1) var(--espacio-3);
+  border-radius: var(--radio-full);
+  font-size: var(--texto-xs);
+  font-weight: 600;
+  background-color: var(--color-acento);
+  color: var(--color-primario-oscuro);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* separador decorativo */
+.separador {
+  border: none;
+  border-top: 2px solid var(--color-borde);
+  margin: var(--espacio-8) 0;
+}

@@ -13,7 +13,164 @@
     <div id='navbar'></div>
 
     <main>
-      <!-- contenido admin -->
+      <div class='admin-pagina contenedor'>
+        <div class='admin-encabezado'>
+          <h1 class='admin-encabezado__titulo'>Panel de administración</h1>
+          <button class='boton boton-primario' id='btn-nuevo-producto'>+ Nuevo producto</button>
+        </div>
+
+        <div class='admin-tabla-wrap'>
+          <table class='admin-tabla'>
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src='assets/logo.webp' alt='Bombacha' class='admin-tabla__img' />
+                </td>
+                <td>
+                  <p class='admin-tabla__nombre'>Bombacha de campo clásica</p>
+                  <p class='admin-tabla__categoria'>Talle M, Natural</p>
+                </td>
+                <td>Bombachas</td>
+                <td><span class='precio' style='font-size: var(--texto-base)'>$12.500</span></td>
+                <td><span class='admin-stock disponible'>Disponible</span></td>
+                <td>
+                  <div class='admin-acciones'>
+                    <button class='admin-btn-editar' data-id='1'>Editar</button>
+                    <button class='admin-btn-eliminar' data-id='1'>Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img src='assets/logo.webp' alt='Camisa' class='admin-tabla__img' />
+                </td>
+                <td>
+                  <p class='admin-tabla__nombre'>Camisa gaucha manga larga</p>
+                  <p class='admin-tabla__categoria'>Varios talles</p>
+                </td>
+                <td>Camisas</td>
+                <td><span class='precio' style='font-size: var(--texto-base)'>$9.800</span></td>
+                <td><span class='admin-stock disponible'>Disponible</span></td>
+                <td>
+                  <div class='admin-acciones'>
+                    <button class='admin-btn-editar' data-id='2'>Editar</button>
+                    <button class='admin-btn-eliminar' data-id='2'>Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img src='assets/logo.webp' alt='Sombrero' class='admin-tabla__img' />
+                </td>
+                <td>
+                  <p class='admin-tabla__nombre'>Sombrero patagónico</p>
+                  <p class='admin-tabla__categoria'>Talle único</p>
+                </td>
+                <td>Sombreros</td>
+                <td><span class='precio' style='font-size: var(--texto-base)'>$15.200</span></td>
+                <td><span class='admin-stock sin-stock'>Sin stock</span></td>
+                <td>
+                  <div class='admin-acciones'>
+                    <button class='admin-btn-editar' data-id='3'>Editar</button>
+                    <button class='admin-btn-eliminar' data-id='3'>Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img src='assets/logo.webp' alt='Poncho' class='admin-tabla__img' />
+                </td>
+                <td>
+                  <p class='admin-tabla__nombre'>Poncho tradicional jujeño</p>
+                  <p class='admin-tabla__categoria'>Color terracota</p>
+                </td>
+                <td>Ponchos</td>
+                <td><span class='precio' style='font-size: var(--texto-base)'>$22.000</span></td>
+                <td><span class='admin-stock disponible'>Disponible</span></td>
+                <td>
+                  <div class='admin-acciones'>
+                    <button class='admin-btn-editar' data-id='4'>Editar</button>
+                    <button class='admin-btn-eliminar' data-id='4'>Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- modal crear/editar producto -->
+      <div class='modal-fondo oculto' id='modal-producto'>
+        <div class='modal'>
+          <div class='modal__encabezado'>
+            <h2 class='modal__titulo' id='modal-titulo'>Nuevo producto</h2>
+            <button class='modal__cerrar' id='btn-cerrar-modal'>✕</button>
+          </div>
+
+          <form class='modal__form' novalidate>
+            <div class='campo'>
+              <label class='campo__etiqueta' for='prod-nombre'>
+                Nombre <span style='color: var(--color-error)'>*</span>
+              </label>
+              <input class='campo__input' type='text' id='prod-nombre' placeholder='Bombacha de campo clásica' required />
+            </div>
+
+            <div class='campo'>
+              <label class='campo__etiqueta' for='prod-descripcion'>Descripción</label>
+              <input class='campo__input' type='text' id='prod-descripcion' placeholder='Descripción breve del producto' />
+            </div>
+
+            <div class='modal__fila'>
+              <div class='campo'>
+                <label class='campo__etiqueta' for='prod-precio'>
+                  Precio <span style='color: var(--color-error)'>*</span>
+                </label>
+                <input class='campo__input' type='number' id='prod-precio' placeholder='12500' required />
+              </div>
+              <div class='campo'>
+                <label class='campo__etiqueta' for='prod-stock'>Stock</label>
+                <input class='campo__input' type='number' id='prod-stock' placeholder='10' />
+              </div>
+            </div>
+
+            <div class='campo'>
+              <label class='campo__etiqueta' for='prod-categoria'>Categoría</label>
+              <select class='campo__select' id='prod-categoria'>
+                <option value=''>Seleccioná una categoría</option>
+                <option>Bombachas</option>
+                <option>Camisas</option>
+                <option>Sombreros</option>
+                <option>Botas</option>
+                <option>Ponchos</option>
+                <option>Accesorios</option>
+              </select>
+            </div>
+
+            <div class='campo'>
+              <label class='campo__etiqueta' for='prod-imagen'>URL de imagen</label>
+              <input class='campo__input' type='url' id='prod-imagen' placeholder='https://...' />
+            </div>
+
+            <div class='modal__acciones'>
+              <button type='button' class='boton boton-secundario' id='btn-cancelar'>Cancelar</button>
+              <button type='submit' class='boton boton-primario'>Guardar producto</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
 
     <script src='src/components/navbar.js'></script>
@@ -21,7 +178,21 @@
     <script src='src/main.js'></script>
     <script>
       renderNavbar('');
-      renderFooter();
+
+      /* toggle modal */
+      const modal = document.getElementById('modal-producto');
+      document.getElementById('btn-nuevo-producto').addEventListener('click', () => {
+        modal.classList.remove('oculto');
+      });
+      document.getElementById('btn-cerrar-modal').addEventListener('click', () => {
+        modal.classList.add('oculto');
+      });
+      document.getElementById('btn-cancelar').addEventListener('click', () => {
+        modal.classList.add('oculto');
+      });
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.add('oculto');
+      });
     </script>
   </body>
 </html>

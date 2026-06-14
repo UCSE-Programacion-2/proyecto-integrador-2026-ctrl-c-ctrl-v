@@ -13,7 +13,199 @@
     <div id='navbar'></div>
 
     <main>
-      <!-- contenido checkout -->
+      <div class='checkout-pagina contenedor'>
+        <h1 class='checkout-pagina__titulo'>Checkout</h1>
+
+        <!-- pasos -->
+        <div class='checkout-pasos'>
+          <div class='checkout-paso completado'>
+            <div class='checkout-paso__num'>✓</div>
+            <span class='checkout-paso__texto'>Carrito</span>
+          </div>
+          <div class='checkout-pasos__linea'></div>
+          <div class='checkout-paso activo'>
+            <div class='checkout-paso__num'>2</div>
+            <span class='checkout-paso__texto'>Datos de envío</span>
+          </div>
+          <div class='checkout-pasos__linea'></div>
+          <div class='checkout-paso'>
+            <div class='checkout-paso__num'>3</div>
+            <span class='checkout-paso__texto'>Pago</span>
+          </div>
+          <div class='checkout-pasos__linea'></div>
+          <div class='checkout-paso'>
+            <div class='checkout-paso__num'>4</div>
+            <span class='checkout-paso__texto'>Confirmación</span>
+          </div>
+        </div>
+
+        <div class='checkout-layout'>
+          <!-- formulario -->
+          <form class='checkout-form' novalidate>
+            <div class='checkout-form__seccion'>
+              <h2 class='checkout-form__seccion-titulo'>Datos personales</h2>
+              <div class='checkout-form__fila'>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='nombre'>
+                    Nombre <span>*</span>
+                  </label>
+                  <input
+                    class='campo__input'
+                    type='text'
+                    id='nombre'
+                    name='nombre'
+                    placeholder='Juan'
+                    required
+                  />
+                </div>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='apellido'>
+                    Apellido <span>*</span>
+                  </label>
+                  <input
+                    class='campo__input'
+                    type='text'
+                    id='apellido'
+                    name='apellido'
+                    placeholder='Pérez'
+                    required
+                  />
+                </div>
+              </div>
+              <div class='checkout-form__fila'>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='email'>
+                    Email <span>*</span>
+                  </label>
+                  <input
+                    class='campo__input'
+                    type='email'
+                    id='email'
+                    name='email'
+                    placeholder='juan@ejemplo.com'
+                    required
+                  />
+                </div>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='telefono'>Teléfono</label>
+                  <input
+                    class='campo__input'
+                    type='tel'
+                    id='telefono'
+                    name='telefono'
+                    placeholder='+54 9 388 000-0000'
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class='checkout-form__seccion'>
+              <h2 class='checkout-form__seccion-titulo'>Dirección de envío</h2>
+              <div class='checkout-form__fila' style='grid-template-columns: 1fr'>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='calle'>
+                    Calle y número <span>*</span>
+                  </label>
+                  <input
+                    class='campo__input'
+                    type='text'
+                    id='calle'
+                    name='calle'
+                    placeholder='Av. San Martín 1234'
+                    required
+                  />
+                </div>
+              </div>
+              <div class='checkout-form__fila'>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='ciudad'>
+                    Ciudad <span>*</span>
+                  </label>
+                  <input
+                    class='campo__input'
+                    type='text'
+                    id='ciudad'
+                    name='ciudad'
+                    placeholder='San Salvador de Jujuy'
+                    required
+                  />
+                </div>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='provincia'>
+                    Provincia <span>*</span>
+                  </label>
+                  <select class='campo__select' id='provincia' name='provincia' required>
+                    <option value=''>Seleccioná una provincia</option>
+                    <option value='jujuy' selected>Jujuy</option>
+                    <option value='salta'>Salta</option>
+                    <option value='tucuman'>Tucumán</option>
+                    <option value='buenosaires'>Buenos Aires</option>
+                    <option value='cordoba'>Córdoba</option>
+                    <option value='otro'>Otra</option>
+                  </select>
+                </div>
+              </div>
+              <div class='checkout-form__fila'>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='cp'>Código postal</label>
+                  <input
+                    class='campo__input'
+                    type='text'
+                    id='cp'
+                    name='cp'
+                    placeholder='4600'
+                  />
+                </div>
+                <div class='campo'>
+                  <label class='campo__etiqueta' for='piso'>Piso / Depto (opcional)</label>
+                  <input
+                    class='campo__input'
+                    type='text'
+                    id='piso'
+                    name='piso'
+                    placeholder='Piso 3 Depto B'
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class='checkout-form__acciones'>
+              <a href='carrito.html' class='boton boton-secundario'>← Volver al carrito</a>
+              <button type='submit' class='boton boton-primario'>Continuar →</button>
+            </div>
+          </form>
+
+          <!-- resumen del pedido -->
+          <aside class='checkout-resumen'>
+            <h2 class='checkout-resumen__titulo'>Tu pedido</h2>
+
+            <div class='checkout-resumen__item'>
+              <img src='assets/logo.webp' alt='Bombacha' class='checkout-resumen__item-img' />
+              <span class='checkout-resumen__item-nombre'>Bombacha de campo clásica × 2</span>
+              <span class='checkout-resumen__item-precio'>$25.000</span>
+            </div>
+
+            <div class='checkout-resumen__item'>
+              <img src='assets/logo.webp' alt='Sombrero' class='checkout-resumen__item-img' />
+              <span class='checkout-resumen__item-nombre'>Sombrero patagónico × 1</span>
+              <span class='checkout-resumen__item-precio'>$15.200</span>
+            </div>
+
+            <div class='checkout-resumen__item'>
+              <img src='assets/logo.webp' alt='Poncho' class='checkout-resumen__item-img' />
+              <span class='checkout-resumen__item-nombre'>Poncho jujeño × 1</span>
+              <span class='checkout-resumen__item-precio'>$22.000</span>
+            </div>
+
+            <div class='checkout-resumen__total'>
+              <span>Total</span>
+              <span style='font-family: var(--fuente-titulo); font-size: var(--texto-2xl); color: var(--color-primario)'>
+                $62.200
+              </span>
+            </div>
+          </aside>
+        </div>
+      </div>
     </main>
 
     <div id='footer'></div>

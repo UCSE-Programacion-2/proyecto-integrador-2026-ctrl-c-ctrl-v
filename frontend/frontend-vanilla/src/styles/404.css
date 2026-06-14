@@ -1,39 +1,42 @@
-/* estilos de la página 404 */
-
+/* 404 */
 .error-404 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--espacio-16) var(--espacio-4);
+  padding: var(--espacio-16) var(--espacio-8);
   min-height: 60vh;
 }
 
 .error-404__codigo {
-  font-family: var(--fuente-titulo);
-  font-size: 8rem;
+  font-size: clamp(6rem, 15vw, 10rem);
+  font-weight: 300;
   color: var(--color-borde);
   line-height: 1;
-  margin-bottom: var(--espacio-4);
+  margin-bottom: var(--espacio-6);
+  letter-spacing: -0.04em;
 }
 
 .error-404__titulo {
-  font-size: var(--texto-2xl);
-  color: var(--color-primario);
+  font-size: var(--texto-lg);
+  font-weight: 400;
+  color: var(--color-texto);
   margin-bottom: var(--espacio-3);
+  letter-spacing: -0.01em;
 }
 
 .error-404__texto {
   color: var(--color-texto-suave);
-  font-size: var(--texto-lg);
+  font-size: var(--texto-sm);
   margin-bottom: var(--espacio-8);
-  max-width: 420px;
+  max-width: 340px;
+  line-height: 1.7;
 }
 
 .error-404__acciones {
   display: flex;
-  gap: var(--espacio-4);
+  gap: var(--espacio-3);
   flex-wrap: wrap;
   justify-content: center;
 }

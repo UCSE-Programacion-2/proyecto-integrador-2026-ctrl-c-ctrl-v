@@ -1,0 +1,288 @@
+/* estilos de la home */
+
+/* ── banner principal ── */
+.banner {
+  background: linear-gradient(135deg, var(--color-primario-oscuro) 0%, var(--color-primario) 60%, var(--color-primario-claro) 100%);
+  color: #fff;
+  padding: var(--espacio-16) var(--espacio-4);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="40" fill="rgba(201,169,110,0.06)"/><circle cx="80" cy="80" r="50" fill="rgba(201,169,110,0.04)"/></svg>') center/cover;
+  pointer-events: none;
+}
+
+.banner__contenido {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.banner__etiqueta {
+  display: inline-block;
+  background-color: var(--color-acento);
+  color: var(--color-primario-oscuro);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--espacio-2) var(--espacio-4);
+  border-radius: var(--radio-full);
+  margin-bottom: var(--espacio-4);
+}
+
+.banner__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-3xl);
+  color: #fff;
+  margin-bottom: var(--espacio-4);
+  line-height: 1.15;
+}
+
+.banner__titulo span {
+  color: var(--color-acento);
+}
+
+.banner__subtitulo {
+  font-size: var(--texto-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--espacio-8);
+  line-height: 1.6;
+}
+
+.banner__acciones {
+  display: flex;
+  gap: var(--espacio-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .banner__titulo {
+    font-size: var(--texto-4xl);
+  }
+}
+
+/* ── categorías ── */
+.categorias {
+  padding: var(--espacio-12) var(--espacio-4);
+  background-color: var(--color-fondo);
+}
+
+.seccion__encabezado {
+  text-align: center;
+  margin-bottom: var(--espacio-8);
+}
+
+.seccion__titulo {
+  font-size: var(--texto-2xl);
+  color: var(--color-primario);
+  margin-bottom: var(--espacio-2);
+}
+
+.seccion__subtitulo {
+  color: var(--color-texto-suave);
+  font-size: var(--texto-base);
+}
+
+.categorias__grilla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espacio-4);
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+.categoria-card {
+  background-color: var(--color-primario);
+  border-radius: var(--radio-lg);
+  padding: var(--espacio-8) var(--espacio-6);
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+  text-decoration: none;
+  display: block;
+}
+
+.categoria-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-lg);
+}
+
+.categoria-card__icono {
+  font-size: 2.5rem;
+  margin-bottom: var(--espacio-3);
+  display: block;
+}
+
+.categoria-card__nombre {
+  font-family: var(--fuente-titulo);
+  color: var(--color-acento);
+  font-size: var(--texto-lg);
+  font-weight: 600;
+}
+
+.categoria-card__cantidad {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--texto-sm);
+  margin-top: var(--espacio-1);
+}
+
+@media (min-width: 640px) {
+  .categorias__grilla {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .categorias__grilla {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ── destacados ── */
+.destacados {
+  padding: var(--espacio-12) var(--espacio-4);
+  background-color: #fff;
+}
+
+.destacados__inner {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+.destacados__grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-6);
+}
+
+/* tarjeta de producto */
+.producto-card {
+  background-color: var(--color-fondo-tarjeta);
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  box-shadow: var(--sombra-sm);
+  border: 1px solid var(--color-borde);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-md);
+}
+
+.producto-card__imagen-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-fondo);
+  overflow: hidden;
+}
+
+.producto-card__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.producto-card:hover .producto-card__imagen {
+  transform: scale(1.05);
+}
+
+.producto-card__badge {
+  position: absolute;
+  top: var(--espacio-3);
+  left: var(--espacio-3);
+}
+
+.producto-card__cuerpo {
+  padding: var(--espacio-4);
+}
+
+.producto-card__nombre {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-lg);
+  color: var(--color-primario);
+  margin-bottom: var(--espacio-2);
+}
+
+.producto-card__descripcion {
+  font-size: var(--texto-sm);
+  color: var(--color-texto-suave);
+  margin-bottom: var(--espacio-4);
+  line-height: 1.5;
+}
+
+.producto-card__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-3);
+}
+
+@media (min-width: 640px) {
+  .destacados__grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .destacados__grilla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── franja informativa ── */
+.franja-info {
+  background-color: var(--color-acento);
+  padding: var(--espacio-8) var(--espacio-4);
+}
+
+.franja-info__inner {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-6);
+}
+
+.franja-info__item {
+  text-align: center;
+}
+
+.franja-info__icono {
+  font-size: 2rem;
+  margin-bottom: var(--espacio-2);
+  display: block;
+}
+
+.franja-info__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-lg);
+  color: var(--color-primario-oscuro);
+  margin-bottom: var(--espacio-1);
+}
+
+.franja-info__texto {
+  font-size: var(--texto-sm);
+  color: var(--color-primario);
+}
+
+@media (min-width: 640px) {
+  .franja-info__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .franja-info__inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

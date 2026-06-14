@@ -4,7 +4,7 @@
 
 ## Link al archivo
 
-🔗 **[Link al Figma — completar aquí]**
+🔗 **[Sprint 1 — Prendas Gauchas Demetria](https://www.figma.com/design/4l2Ko6cpB30UnG8GJS7Bs3/sprint-1?node-id=1-2&t=Y2vHQTvAU1aIr50z-1)**
 
 ## Pantallas incluidas en el diseño
 

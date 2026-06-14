@@ -10,11 +10,20 @@
     <link rel='stylesheet' href='src/styles/catalogo.css' />
   </head>
   <body>
-    <!-- navbar -->
+    <div id='navbar'></div>
+
     <main>
       <!-- contenido catálogo -->
     </main>
-    <!-- footer -->
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
     <script src='src/main.js'></script>
+    <script>
+      renderNavbar('catalogo.html');
+      renderFooter();
+    </script>
   </body>
 </html>

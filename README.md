@@ -1,36 +1,54 @@
-Tablero de GitHub Projects: https://github.com/orgs/UCSE-Programacion-2/projects/27
+# Prendas Gauchas Demetria — Frontend Estático
 
-# Proyecto: Indumentaria Gaucha - Programación II 2026
-## 👥 Grupo
-Ctrl C + Ctrl V
+E-commerce de indumentaria tradicional gaucha para el trabajo integrador de Programación II — UCSE-DASS 2026.
 
-## 👥 Integrantes
-* Campos Matias - https://github.com/mat1asz
-* Karen Nicole Martinez - https://github.com/NicolMar
-* Garnica Marcos Farid - https://github.com/Farid-cr
-  
+## Integrantes
 
-## 🏢 Cliente Real Elegido
-* **Nombre:** "Prendas gauchas Demetria"
-* **Rubro:** Indumentaria tradicional / ropa gaucha
-* **Justificación:** El comercio seleccionado es una tienda real de indumentaria gaucha, lo que garantiza su existencia y acceso a productos físicos. El catálogo presenta múltiples categorías, tales como bombachas de gaucho, camisas, sombreros, botas y accesorios. Además, los productos poseen atributos relevantes como talle, color, precio, stock, material, descripción e imagen, lo que justifica el uso de una base de datos. El negocio requiere gestionar su inventario, permitiendo la implementación de un sistema CRUD completo para la creación, edición, eliminación y visualización de productos.
-* Ubicacion: Vicuña y pinos 305 B°Chijra 4600 San Salvador de Jujuy, Argentina
+- Campos Matías
+- Karen Martínez
+- Marcos Garnica
 
-## 📝 Reglas de Contribución
-* Uso de Git Flow.
-* PRs requieren 2 aprobaciones.
-* No se acepta código sin Issue asociada.
-* Guía para alumnos (commits y protecciones de PR): `docs/como-ejecutar.md` (sección "Guía para alumnos: commits y PRs").
+## Estructura
 
-## 📹 Sprint Review (todos los sprints)
-* Guía unificada: `docs/sprint-review/README.md`
-* Plantilla para equipos: `docs/sprint-review/sprint-review-template.md`
-* Rúbrica de evaluación: `docs/sprint-review/sprint-review-rubrica.md`
-* Checklist estudiantes: `docs/sprint-review/sprint-review-checklist-estudiantes.md`
-* Checklist docentes: `docs/sprint-review/sprint-review-checklist-docentes.md`
-- Video Sprint Review Sprint 0: https://drive.google.com/file/d/16ZKLH1F6S5218l9aGow6blzooLXCGeGn/view?usp=sharing
+```
+frontend-vanilla/
+├── index.html        # Home
+├── catalogo.html     # Catálogo con filtros
+├── detalle.html      # Detalle de producto
+├── carrito.html      # Carrito de compras
+├── checkout.html     # Checkout / datos de envío
+├── 404.html          # Página no encontrada
+├── admin.html        # Panel de administración
+├── src/
+│   ├── main.js
+│   ├── components/   # Navbar, footer (incluidos en cada HTML)
+│   └── styles/
+│       └── variables.css
+└── assets/           # Imágenes, logo
+```
 
-## 🚀 Deploy y evidencias (Sprint 4)
-* **URL de Producción Frontend:** *Próximamente*
-* **URL de Producción Backend:** *Próximamente*
-* **Video de respaldo:** *Link (Loom/Youtube/Drive)*
+## Cómo correr el proyecto
+
+Abrir `index.html` directamente en el navegador, o usar la extensión **Live Server** de VS Code.
+
+## Links de entrega
+
+| | Link |
+|-|------|
+| Deploy | https://ucse-programacion-2.github.io/proyecto-integrador-2026-ctrl-c-ctrl-v/ |
+| Tablero | https://github.com/orgs/UCSE-Programacion-2/projects/27 |
+| Figma | https://www.figma.com/design/4l2Ko6cpB30UnG8GJS7Bs3/sprint-1?node-id=1-2&t=Y2vHQTvAU1aIr50z-1 |
+| Sprint Review video | https://drive.google.com/file/d/1ONKbuFxzg3AYN6iDn3F23iP8jjIZDngj/view?usp=sharing |
+
+## Sprints cubiertos
+
+- `docs/sprint-1/`: Frontend estático (HTML/CSS) — vistas requeridas.
+- `docs/sprint-3/`: Integración con backend usando JavaScript Vanilla + Fetch API.
+
+## Linting y formato
+
+```bash
+npm install
+npm run lint      # ESLint + Stylelint
+npm run format    # Prettier
+```

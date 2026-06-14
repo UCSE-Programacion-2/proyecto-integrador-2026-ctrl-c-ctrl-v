@@ -10,10 +10,18 @@
     <link rel='stylesheet' href='src/styles/admin.css' />
   </head>
   <body>
-    <!-- navbar admin -->
+    <div id='navbar'></div>
+
     <main>
       <!-- contenido admin -->
     </main>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
     <script src='src/main.js'></script>
+    <script>
+      renderNavbar('');
+      renderFooter();
+    </script>
   </body>
 </html>

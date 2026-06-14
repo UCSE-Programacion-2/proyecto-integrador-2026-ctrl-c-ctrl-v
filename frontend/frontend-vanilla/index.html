@@ -10,11 +10,20 @@
     <link rel='stylesheet' href='src/styles/home.css' />
   </head>
   <body>
-    <!-- navbar -->
+    <div id='navbar'></div>
+
     <main>
       <!-- contenido home -->
     </main>
-    <!-- footer -->
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
     <script src='src/main.js'></script>
+    <script>
+      renderNavbar('index.html');
+      renderFooter();
+    </script>
   </body>
 </html>

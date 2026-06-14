@@ -2,24 +2,23 @@
 
 ## Paleta de colores
 
-Basada en la identidad visual del comercio: tonos tierra que evocan la tradición gaucha y el ambiente rural jujeño.
+Diseño minimalista con tonos neutros que dan protagonismo a los productos y evocan calidez artesanal.
 
 | Variable CSS | Valor | Uso |
 |---|---|---|
-| `--color-primario` | `#5c3d1e` | Navbar, títulos, botones principales, headers de tablas |
-| `--color-primario-claro` | `#7a5230` | Hover de elementos primarios |
-| `--color-primario-oscuro` | `#3e2910` | Footer, hover de links |
-| `--color-acento` | `#c9a96e` | Logo, badges, botones de acento, franja informativa |
-| `--color-acento-claro` | `#dfc08e` | Hover del acento |
-| `--color-fondo` | `#f5f0e8` | Fondo general de la página, inputs |
-| `--color-fondo-tarjeta` | `#ffffff` | Tarjetas de producto, formularios, modales |
-| `--color-texto` | `#1a1a1a` | Texto principal |
-| `--color-texto-suave` | `#555555` | Descripciones, labels, textos secundarios |
-| `--color-borde` | `#ddd4c2` | Bordes de tarjetas, separadores, inputs |
+| `--color-primario` | `#1a1814` | Navbar, botones principales, texto de acción |
+| `--color-primario-claro` | `#3a3632` | Hover de elementos primarios |
+| `--color-primario-oscuro` | `#0d0c0a` | Footer, textos muy oscuros |
+| `--color-fondo` | `#faf8f5` | Fondo general, navbar, cards |
+| `--color-fondo-alt` | `#f3f0eb` | Fondo de imágenes placeholder, resúmenes |
+| `--color-texto` | `#1a1814` | Texto principal |
+| `--color-texto-suave` | `#8a8480` | Labels, descripciones, textos secundarios |
+| `--color-borde` | `#e8e4de` | Bordes de separación, inputs, líneas |
+| `--color-borde-suave` | `#f0ece6` | Separadores internos en listas |
 | `--color-error` | `#c0392b` | Mensajes de error, botón eliminar |
-| `--color-exito` | `#27ae60` | Stock disponible, precio de envío gratuito |
+| `--color-exito` | `#27ae60` | Stock disponible |
 
-**Justificación:** los colores marrones y dorados son consistentes con la estética gaucha y la imagen de Instagram/Facebook del comercio. El fondo crema evita el blanco puro que se siente demasiado moderno para el rubro.
+**Justificación:** la paleta neutra crema-negro elimina el ruido visual y deja que las fotos de los productos sean el foco. La decisión de evitar colores de acento fuertes (antes dorado `#c9a96e`) responde a que la tienda tiene productos con muchos colores propios; un acento llamativo compite con el catálogo.
 
 ---
 
@@ -27,52 +26,55 @@ Basada en la identidad visual del comercio: tonos tierra que evocan la tradició
 
 | Variable CSS | Fuente | Uso |
 |---|---|---|
-| `--fuente-titulo` | Playfair Display (Google Fonts) | H1, H2, H3, precios, logo, nombres de producto |
-| `--fuente-cuerpo` | Inter (Google Fonts) | Párrafos, labels, botones, descripciones |
+| `--fuente-titulo` | DM Sans (Google Fonts, weight 300/400/500) | Títulos, nombres de producto, precios |
+| `--fuente-cuerpo` | DM Sans (Google Fonts, weight 300/400/500) | Párrafos, labels, botones, formularios |
 
-**Justificación:** Playfair Display tiene un carácter clásico y elegante que refuerza la tradición. Inter es moderna y legible en pantalla, ideal para textos funcionales.
+**Justificación:** una única familia tipográfica (DM Sans) simplifica la jerarquía visual. La diferenciación entre títulos y cuerpo se logra con tamaño, peso y letter-spacing en lugar de cambiar de familia. Esto es más limpio que la combinación Playfair Display + Inter del diseño inicial.
 
 ---
 
 ## Componentes principales
 
 ### Navbar
-- Fondo marrón oscuro (`--color-primario`), sticky en el top.
-- Logo con imagen redonda + nombre del comercio + subtítulo.
-- Links de navegación con borde inferior dorado cuando están activos.
-- Ícono de carrito con badge contador.
-- Menú hamburguesa en mobile que despliega un panel vertical.
+- Fondo crema (`--color-fondo`), sticky en el top.
+- Logo: imagen redonda pequeña (32px) + nombre en uppercase espaciado.
+- Links en uppercase 11px con letter-spacing, borde inferior al estar activos.
+- Íconos de búsqueda y carrito en negro.
+- Menú hamburguesa en mobile (3 líneas de 1px, sin color de fondo).
 
 ### Footer
+- Fondo casi negro (`#1a1814`), texto blanco tenue.
 - 4 columnas en desktop, 2 en tablet, 1 en mobile.
-- Secciones: descripción del comercio, navegación, categorías, contacto.
-- Fondo marrón muy oscuro (`--color-primario-oscuro`).
+- Títulos en uppercase con letter-spacing.
 
 ### Tarjeta de producto
-- Imagen con efecto zoom en hover.
-- Badge de etiqueta ("Destacado", "Nuevo") sobre la imagen.
-- Nombre en Playfair Display, descripción en Inter, precio destacado.
-- Botón "Ver detalle" en el pie de la tarjeta.
+- Sin sombra ni borde — separadas por grilla de 1px entre cards.
+- Imagen con aspect-ratio 3:4, fondo crema alt.
+- Leve zoom en hover (scale 1.04).
+- Nombre en 13px regular, precio en 13px regular.
+- Sin botón visible hasta hacer hover (en sprint futuro).
 
 ### Botones
-- `.boton-primario`: marrón sólido, texto blanco — acciones principales.
-- `.boton-secundario`: borde marrón, fondo transparente — acciones secundarias.
-- `.boton-acento`: dorado/beige — acciones de conversión ("Comprar ahora").
+- `border-radius: 0` — todos rectangulares.
+- `.boton-primario`: negro sólido, texto crema.
+- `.boton-secundario`: transparente, borde crema.
+- `.boton-acento`: transparente, borde negro (igual al secundario en este diseño).
+- Font-size 11px, uppercase, letter-spacing 0.09em.
 
 ### Filtros (catálogo)
-- Panel lateral de 260px en desktop, colapsado en mobile.
-- Checkboxes con `accent-color: var(--color-primario)`.
-- Rango de precios con dos inputs numéricos.
+- Sin card contenedora — los filtros flotan sobre el fondo.
+- Separados por líneas de 1px entre grupos.
+- Checkboxes con `accent-color: #1a1814`.
 
 ### Formulario (checkout)
-- Grid de 2 columnas en desktop, 1 en mobile.
-- Inputs con borde que cambia a marrón en foco.
-- Indicador de pasos numerados en el encabezado.
+- Sin bordes redondeados en inputs.
+- Borde que cambia a negro en foco.
+- Labels en uppercase 11px.
 
 ### Modal (admin)
-- Overlay semitransparente sobre toda la página.
-- Panel centrado de 560px máx con formulario de producto.
-- Cierre por botón ✕, por clic en el fondo, o por botón "Cancelar".
+- Overlay oscuro `rgba(26, 24, 20, 0.6)`.
+- Panel sin border-radius, borde fino `1px solid --color-borde`.
+- Título en uppercase.
 
 ---
 
@@ -80,9 +82,9 @@ Basada en la identidad visual del comercio: tonos tierra que evocan la tradició
 
 Sistema de 8 puntos: `4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px`.
 
-- Padding de sección: `var(--espacio-12)` (48px) arriba y abajo.
-- Gap entre tarjetas: `var(--espacio-6)` (24px).
-- Padding de contenedor: `var(--espacio-4)` (16px) horizontal.
+- Padding de página: `var(--espacio-8)` (32px) horizontal.
+- Padding de sección hero: `var(--espacio-16)` (64px) arriba.
+- Gap entre cards: `1px` (borde de grilla).
 - Ancho máximo del contenido: `1200px`.
 
 ---
@@ -91,14 +93,14 @@ Sistema de 8 puntos: `4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px`.
 
 | Breakpoint | Cambio principal |
 |---|---|
-| < 640px (mobile) | 1 columna, navbar colapsada, tablas con scroll horizontal |
-| 640px–767px (tablet chico) | 2 columnas en grillas de productos y footer |
-| 768px–1023px (tablet) | Filtros aparecen en sidebar, 2 columnas en layout detalle |
-| ≥ 1024px (desktop) | 3–4 columnas en catálogo, sidebar de resumen en carrito/checkout |
+| < 640px (mobile) | 1 columna, navbar colapsada, franja info en 1 col |
+| 640px–767px (tablet chico) | 2 columnas en grillas |
+| 768px–1023px (tablet) | Sidebar de filtros visible, layout detalle 2 col |
+| ≥ 1024px (desktop) | 4 cols en destacados, 3 en catálogo, sidebar en carrito/checkout |
 
 ---
 
 ## Estados de carga y error
 
 > Sprint 1 es UI estática. Los estados de loading/error se implementan en Sprint 3 con fetch a la API.
-> Se reservaron clases CSS `.estado-cargando` y `.estado-error` en `base.css` para usarlas en Sprint 3.
+> Se reservaron clases `.estado-cargando` y `.estado-error` en `base.css`.

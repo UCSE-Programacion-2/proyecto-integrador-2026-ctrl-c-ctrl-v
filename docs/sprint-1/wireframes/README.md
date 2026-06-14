@@ -1,9 +1,20 @@
 # Wireframes — Sprint 1
 
-En este sprint los wireframes se implementaron directamente como código HTML/CSS funcional
-en `frontend/frontend-vanilla/`. Las capturas a continuación representan cada pantalla.
+Los wireframes fueron implementados directamente como código HTML/CSS funcional en `frontend/frontend-vanilla/` y exportados como capturas de pantalla de la versión desplegada.
 
-## Pantallas implementadas
+## Capturas exportadas
+
+| Pantalla | Archivo |
+|----------|---------|
+| Home | [01-home.png](png/01-home.png) |
+| Catálogo con filtros | [02-catalogo.png](png/02-catalogo.png) |
+| Detalle de producto | [03-detalle.png](png/03-detalle.png) |
+| Carrito de compras | [04-carrito.png](png/04-carrito.png) |
+| Checkout | [05-checkout.png](png/05-checkout.png) |
+| Página 404 | [06-404.png](png/06-404.png) |
+| Panel de administración | [07-admin.png](png/07-admin.png) |
+
+## Descripción de cada pantalla
 
 ### 1. Home (`index.html`)
 - Navbar con logo, links y carrito
@@ -45,25 +56,22 @@ en `frontend/frontend-vanilla/`. Las capturas a continuación representan cada p
 - Botones "Volver al carrito" y "Continuar"
 
 ### 6. Página 404 (`404.html`)
-- Número "404" gigante en color borde (decorativo)
+- Número "404" gigante decorativo
 - Título "Página no encontrada"
 - Texto explicativo
 - Botones "Ir al inicio" + "Ver catálogo"
 
 ### 7. Panel de administración (`admin.html`)
 - Encabezado con título + botón "+ Nuevo producto"
-- Tabla: Imagen, Producto (nombre + variante), Categoría, Precio, Stock (badge verde/rojo), Acciones
-- Botones Editar (dorado) y Eliminar (rojo) por fila
+- Tabla: Imagen, Producto (nombre + variante), Categoría, Precio, Stock (badge), Acciones
+- Botones Editar y Eliminar por fila
 - Modal de creación/edición: Nombre, Descripción, Precio, Stock (2 col), Categoría, URL imagen
 
-## Capturas de pantalla
+## Ver en vivo
 
-Las capturas fueron tomadas durante el desarrollo. Para ver las pantallas en vivo:
-
-```
-# instalar dependencias y levantar servidor local
+```bash
 cd frontend/frontend-vanilla
 npx serve . -p 3000
 ```
 
-Luego abrir `http://localhost:3000/index.html` en el navegador.
+Luego abrir `http://localhost:3000` en el navegador.

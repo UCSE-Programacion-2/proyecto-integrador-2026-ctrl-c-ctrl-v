@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Catálogo — Prendas Gauchas Demetria</title>
+    <link rel='stylesheet' href='src/styles/variables.css' />
+    <link rel='stylesheet' href='src/styles/base.css' />
+    <link rel='stylesheet' href='src/styles/layout.css' />
+    <link rel='stylesheet' href='src/styles/home.css' />
+    <link rel='stylesheet' href='src/styles/catalogo.css' />
+  </head>
+  <body>
+    <div id='navbar'></div>
+
+    <main>
+      <div class='catalogo-pagina contenedor'>
+        <div class='catalogo-pagina__encabezado'>
+          <h1 class='catalogo-pagina__titulo'>Catálogo de productos</h1>
+          <p class='catalogo-pagina__cantidad'>Mostrando 12 de 48 productos</p>
+        </div>
+
+        <div class='catalogo-layout'>
+          <!-- filtros laterales -->
+          <aside class='filtros'>
+            <h2 class='filtros__titulo'>Filtros</h2>
+
+            <div class='filtros__grupo'>
+              <p class='filtros__grupo-titulo'>Categoría</p>
+              <div class='filtros__opciones'>
+                <label class='filtros__opcion'>
+                  <input type='checkbox' checked /> Bombachas
+                </label>
+                <label class='filtros__opcion'>
+                  <input type='checkbox' /> Camisas
+                </label>
+                <label class='filtros__opcion'>
+                  <input type='checkbox' /> Sombreros
+                </label>
+                <label class='filtros__opcion'>
+                  <input type='checkbox' /> Botas
+                </label>
+                <label class='filtros__opcion'>
+                  <input type='checkbox' /> Ponchos
+                </label>
+                <label class='filtros__opcion'>
+                  <input type='checkbox' /> Accesorios
+                </label>
+              </div>
+            </div>
+
+            <div class='filtros__grupo'>
+              <p class='filtros__grupo-titulo'>Precio</p>
+              <div class='filtros__rango'>
+                <input type='number' placeholder='Mín' value='0' />
+                <span>—</span>
+                <input type='number' placeholder='Máx' value='50000' />
+              </div>
+            </div>
+
+            <div class='filtros__grupo'>
+              <p class='filtros__grupo-titulo'>Talle</p>
+              <div class='filtros__opciones'>
+                <label class='filtros__opcion'><input type='checkbox' /> S</label>
+                <label class='filtros__opcion'><input type='checkbox' checked /> M</label>
+                <label class='filtros__opcion'><input type='checkbox' checked /> L</label>
+                <label class='filtros__opcion'><input type='checkbox' /> XL</label>
+                <label class='filtros__opcion'><input type='checkbox' /> XXL</label>
+              </div>
+            </div>
+
+            <button class='boton boton-secundario filtros__limpiar'>Limpiar filtros</button>
+          </aside>
+
+          <!-- grilla + barra de orden -->
+          <section>
+            <div class='catalogo-barra'>
+              <span style='font-size: var(--texto-sm); color: var(--color-texto-suave)'>
+                12 resultados
+              </span>
+              <div class='catalogo-barra__orden'>
+                <label for='orden' style='font-size: var(--texto-sm)'>Ordenar:</label>
+                <select id='orden' class='catalogo-barra__select'>
+                  <option>Más relevantes</option>
+                  <option>Menor precio</option>
+                  <option>Mayor precio</option>
+                  <option>Más nuevos</option>
+                </select>
+              </div>
+            </div>
+
+            <div class='catalogo-grilla'>
+              <!-- 6 tarjetas de ejemplo -->
+              <article class='producto-card'>
+                <div class='producto-card__imagen-wrap'>
+                  <img src='assets/logo.webp' alt='Bombacha de campo' class='producto-card__imagen' />
+                  <div class='producto-card__badge'><span class='etiqueta'>Destacado</span></div>
+                </div>
+                <div class='producto-card__cuerpo'>
+                  <h3 class='producto-card__nombre'>Bombacha de campo clásica</h3>
+                  <p class='producto-card__descripcion'>Algodón resistente, varios talles.</p>
+                  <div class='producto-card__pie'>
+                    <span class='precio'>$12.500</span>
+                    <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class='producto-card'>
+                <div class='producto-card__imagen-wrap'>
+                  <img src='assets/logo.webp' alt='Camisa gaucha' class='producto-card__imagen' />
+                </div>
+                <div class='producto-card__cuerpo'>
+                  <h3 class='producto-card__nombre'>Camisa gaucha manga larga</h3>
+                  <p class='producto-card__descripcion'>Tela liviana con bordados típicos.</p>
+                  <div class='producto-card__pie'>
+                    <span class='precio'>$9.800</span>
+                    <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class='producto-card'>
+                <div class='producto-card__imagen-wrap'>
+                  <img src='assets/logo.webp' alt='Sombrero patagónico' class='producto-card__imagen' />
+                  <div class='producto-card__badge'><span class='etiqueta'>Nuevo</span></div>
+                </div>
+                <div class='producto-card__cuerpo'>
+                  <h3 class='producto-card__nombre'>Sombrero patagónico</h3>
+                  <p class='producto-card__descripcion'>Fieltro de alta calidad.</p>
+                  <div class='producto-card__pie'>
+                    <span class='precio'>$15.200</span>
+                    <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class='producto-card'>
+                <div class='producto-card__imagen-wrap'>
+                  <img src='assets/logo.webp' alt='Poncho jujeño' class='producto-card__imagen' />
+                </div>
+                <div class='producto-card__cuerpo'>
+                  <h3 class='producto-card__nombre'>Poncho tradicional jujeño</h3>
+                  <p class='producto-card__descripcion'>Tejido a mano con lana natural.</p>
+                  <div class='producto-card__pie'>
+                    <span class='precio'>$22.000</span>
+                    <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class='producto-card'>
+                <div class='producto-card__imagen-wrap'>
+                  <img src='assets/logo.webp' alt='Botas de cuero' class='producto-card__imagen' />
+                </div>
+                <div class='producto-card__cuerpo'>
+                  <h3 class='producto-card__nombre'>Botas de cuero gaucho</h3>
+                  <p class='producto-card__descripcion'>Cuero genuino, suela reforzada.</p>
+                  <div class='producto-card__pie'>
+                    <span class='precio'>$38.000</span>
+                    <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class='producto-card'>
+                <div class='producto-card__imagen-wrap'>
+                  <img src='assets/logo.webp' alt='Cinturón de cuero' class='producto-card__imagen' />
+                </div>
+                <div class='producto-card__cuerpo'>
+                  <h3 class='producto-card__nombre'>Cinturón de cuero trenzado</h3>
+                  <p class='producto-card__descripcion'>Accesorio tradicional artesanal.</p>
+                  <div class='producto-card__pie'>
+                    <span class='precio'>$5.600</span>
+                    <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
+    <script src='src/main.js'></script>
+    <script>
+      renderNavbar('catalogo.html');
+      renderFooter();
+    </script>
+  </body>
+</html>

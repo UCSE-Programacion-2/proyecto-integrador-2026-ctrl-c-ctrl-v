@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Prendas Gauchas Demetria</title>
+    <link rel='stylesheet' href='src/styles/variables.css' />
+    <link rel='stylesheet' href='src/styles/base.css' />
+    <link rel='stylesheet' href='src/styles/layout.css' />
+    <link rel='stylesheet' href='src/styles/home.css' />
+  </head>
+  <body>
+    <div id='navbar'></div>
+
+    <main>
+      <!-- banner principal -->
+      <section class='banner'>
+        <div class='banner__contenido'>
+          <span class='banner__etiqueta'>Jujuy, Argentina</span>
+          <h1 class='banner__titulo'>
+            Vestí la <span>tradición</span><br />gaucha con orgullo
+          </h1>
+          <p class='banner__subtitulo'>
+            Bombachas, camisas, sombreros, botas y accesorios de la más alta calidad.<br />
+            Directamente desde el corazón de Jujuy.
+          </p>
+          <div class='banner__acciones'>
+            <a href='catalogo.html' class='boton boton-acento'>Ver catálogo</a>
+            <a href='#destacados' class='boton boton-secundario'>Destacados</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- franja informativa -->
+      <section class='franja-info'>
+        <div class='franja-info__inner'>
+          <div class='franja-info__item'>
+            <span class='franja-info__icono'>🏆</span>
+            <h3 class='franja-info__titulo'>Calidad garantizada</h3>
+            <p class='franja-info__texto'>Materiales seleccionados artesanalmente</p>
+          </div>
+          <div class='franja-info__item'>
+            <span class='franja-info__icono'>🚚</span>
+            <h3 class='franja-info__titulo'>Envíos a todo el país</h3>
+            <p class='franja-info__texto'>Llegamos a cualquier provincia</p>
+          </div>
+          <div class='franja-info__item'>
+            <span class='franja-info__icono'>💳</span>
+            <h3 class='franja-info__titulo'>Múltiples pagos</h3>
+            <p class='franja-info__texto'>Efectivo, transferencia y tarjeta</p>
+          </div>
+          <div class='franja-info__item'>
+            <span class='franja-info__icono'>🤝</span>
+            <h3 class='franja-info__titulo'>Atención personalizada</h3>
+            <p class='franja-info__texto'>Te asesoramos en tu compra</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- categorías -->
+      <section class='categorias'>
+        <div class='seccion__encabezado'>
+          <h2 class='seccion__titulo'>Nuestras categorías</h2>
+          <p class='seccion__subtitulo'>Encontrá todo lo que necesitás para el campo y los festivales</p>
+        </div>
+        <div class='categorias__grilla contenedor'>
+          <a href='catalogo.html' class='categoria-card'>
+            <span class='categoria-card__icono'>👖</span>
+            <p class='categoria-card__nombre'>Bombachas</p>
+            <p class='categoria-card__cantidad'>de campo</p>
+          </a>
+          <a href='catalogo.html' class='categoria-card'>
+            <span class='categoria-card__icono'>👔</span>
+            <p class='categoria-card__nombre'>Camisas</p>
+            <p class='categoria-card__cantidad'>gauchas</p>
+          </a>
+          <a href='catalogo.html' class='categoria-card'>
+            <span class='categoria-card__icono'>🎩</span>
+            <p class='categoria-card__nombre'>Sombreros</p>
+            <p class='categoria-card__cantidad'>tradicionales</p>
+          </a>
+          <a href='catalogo.html' class='categoria-card'>
+            <span class='categoria-card__icono'>🥾</span>
+            <p class='categoria-card__nombre'>Botas</p>
+            <p class='categoria-card__cantidad'>de cuero</p>
+          </a>
+          <a href='catalogo.html' class='categoria-card'>
+            <span class='categoria-card__icono'>🧣</span>
+            <p class='categoria-card__nombre'>Accesorios</p>
+            <p class='categoria-card__cantidad'>y ponchos</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- productos destacados -->
+      <section class='destacados' id='destacados'>
+        <div class='destacados__inner'>
+          <div class='seccion__encabezado'>
+            <h2 class='seccion__titulo'>Productos destacados</h2>
+            <p class='seccion__subtitulo'>Los más elegidos por nuestros clientes</p>
+          </div>
+
+          <div class='destacados__grilla'>
+            <!-- producto 1 -->
+            <article class='producto-card'>
+              <div class='producto-card__imagen-wrap'>
+                <img
+                  src='assets/logo.webp'
+                  alt='Bombacha de campo clásica'
+                  class='producto-card__imagen'
+                />
+                <div class='producto-card__badge'>
+                  <span class='etiqueta'>Destacado</span>
+                </div>
+              </div>
+              <div class='producto-card__cuerpo'>
+                <h3 class='producto-card__nombre'>Bombacha de campo clásica</h3>
+                <p class='producto-card__descripcion'>
+                  Bombacha tradicional de algodón resistente, ideal para el trabajo diario.
+                </p>
+                <div class='producto-card__pie'>
+                  <span class='precio'>$12.500</span>
+                  <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- producto 2 -->
+            <article class='producto-card'>
+              <div class='producto-card__imagen-wrap'>
+                <img
+                  src='assets/logo.webp'
+                  alt='Camisa gaucha manga larga'
+                  class='producto-card__imagen'
+                />
+              </div>
+              <div class='producto-card__cuerpo'>
+                <h3 class='producto-card__nombre'>Camisa gaucha manga larga</h3>
+                <p class='producto-card__descripcion'>
+                  Camisa de tela liviana con detalles bordados, perfecta para festivales.
+                </p>
+                <div class='producto-card__pie'>
+                  <span class='precio'>$9.800</span>
+                  <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- producto 3 -->
+            <article class='producto-card'>
+              <div class='producto-card__imagen-wrap'>
+                <img
+                  src='assets/logo.webp'
+                  alt='Sombrero patagónico'
+                  class='producto-card__imagen'
+                />
+                <div class='producto-card__badge'>
+                  <span class='etiqueta'>Nuevo</span>
+                </div>
+              </div>
+              <div class='producto-card__cuerpo'>
+                <h3 class='producto-card__nombre'>Sombrero patagónico</h3>
+                <p class='producto-card__descripcion'>
+                  Sombrero de fieltro de alta calidad, resistente al sol y a la lluvia.
+                </p>
+                <div class='producto-card__pie'>
+                  <span class='precio'>$15.200</span>
+                  <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- producto 4 -->
+            <article class='producto-card'>
+              <div class='producto-card__imagen-wrap'>
+                <img
+                  src='assets/logo.webp'
+                  alt='Poncho tradicional jujeño'
+                  class='producto-card__imagen'
+                />
+              </div>
+              <div class='producto-card__cuerpo'>
+                <h3 class='producto-card__nombre'>Poncho tradicional jujeño</h3>
+                <p class='producto-card__descripcion'>
+                  Tejido a mano con lana natural, colores típicos de la región andina.
+                </p>
+                <div class='producto-card__pie'>
+                  <span class='precio'>$22.000</span>
+                  <a href='detalle.html' class='boton boton-primario'>Ver detalle</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div style='text-align: center; margin-top: var(--espacio-8)'>
+            <a href='catalogo.html' class='boton boton-secundario'>Ver todo el catálogo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
+    <script src='src/main.js'></script>
+    <script>
+      renderNavbar('index.html');
+      renderFooter();
+    </script>
+  </body>
+</html>

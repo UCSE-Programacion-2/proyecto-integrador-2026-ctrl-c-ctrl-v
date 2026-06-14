@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Carrito — Prendas Gauchas Demetria</title>
+    <link rel='stylesheet' href='src/styles/variables.css' />
+    <link rel='stylesheet' href='src/styles/base.css' />
+    <link rel='stylesheet' href='src/styles/layout.css' />
+    <link rel='stylesheet' href='src/styles/carrito.css' />
+  </head>
+  <body>
+    <div id='navbar'></div>
+
+    <main>
+      <div class='carrito-pagina contenedor'>
+        <h1 class='carrito-pagina__titulo'>Carrito de compras</h1>
+
+        <div class='carrito-layout'>
+          <!-- tabla de productos -->
+          <div>
+            <div class='carrito-tabla-wrap'>
+              <table class='carrito-tabla'>
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- producto 1 -->
+                  <tr>
+                    <td>
+                      <div class='carrito-producto'>
+                        <img
+                          src='assets/logo.webp'
+                          alt='Bombacha de campo'
+                          class='carrito-producto__img'
+                        />
+                        <div>
+                          <p class='carrito-producto__nombre'>Bombacha de campo clásica</p>
+                          <p class='carrito-producto__variante'>Talle M — Natural</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class='precio'>$12.500</span></td>
+                    <td>
+                      <div class='carrito-cantidad'>
+                        <button class='carrito-cantidad__btn'>−</button>
+                        <span class='carrito-cantidad__valor'>2</span>
+                        <button class='carrito-cantidad__btn'>+</button>
+                      </div>
+                    </td>
+                    <td><span class='precio'>$25.000</span></td>
+                    <td>
+                      <button class='carrito-eliminar' title='Eliminar'>✕</button>
+                    </td>
+                  </tr>
+
+                  <!-- producto 2 -->
+                  <tr>
+                    <td>
+                      <div class='carrito-producto'>
+                        <img
+                          src='assets/logo.webp'
+                          alt='Sombrero patagónico'
+                          class='carrito-producto__img'
+                        />
+                        <div>
+                          <p class='carrito-producto__nombre'>Sombrero patagónico</p>
+                          <p class='carrito-producto__variante'>Talle único</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class='precio'>$15.200</span></td>
+                    <td>
+                      <div class='carrito-cantidad'>
+                        <button class='carrito-cantidad__btn'>−</button>
+                        <span class='carrito-cantidad__valor'>1</span>
+                        <button class='carrito-cantidad__btn'>+</button>
+                      </div>
+                    </td>
+                    <td><span class='precio'>$15.200</span></td>
+                    <td>
+                      <button class='carrito-eliminar' title='Eliminar'>✕</button>
+                    </td>
+                  </tr>
+
+                  <!-- producto 3 -->
+                  <tr>
+                    <td>
+                      <div class='carrito-producto'>
+                        <img
+                          src='assets/logo.webp'
+                          alt='Poncho jujeño'
+                          class='carrito-producto__img'
+                        />
+                        <div>
+                          <p class='carrito-producto__nombre'>Poncho tradicional jujeño</p>
+                          <p class='carrito-producto__variante'>Color terracota</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class='precio'>$22.000</span></td>
+                    <td>
+                      <div class='carrito-cantidad'>
+                        <button class='carrito-cantidad__btn'>−</button>
+                        <span class='carrito-cantidad__valor'>1</span>
+                        <button class='carrito-cantidad__btn'>+</button>
+                      </div>
+                    </td>
+                    <td><span class='precio'>$22.000</span></td>
+                    <td>
+                      <button class='carrito-eliminar' title='Eliminar'>✕</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style='margin-top: var(--espacio-4)'>
+              <a href='catalogo.html' class='boton boton-secundario'>← Seguir comprando</a>
+            </div>
+          </div>
+
+          <!-- resumen del pedido -->
+          <aside class='carrito-resumen'>
+            <h2 class='carrito-resumen__titulo'>Resumen del pedido</h2>
+
+            <div class='carrito-resumen__linea'>
+              <span>Subtotal (4 artículos)</span>
+              <span>$62.200</span>
+            </div>
+            <div class='carrito-resumen__linea'>
+              <span>Envío</span>
+              <span style='color: var(--color-exito); font-weight: 600'>A calcular</span>
+            </div>
+
+            <div class='carrito-resumen__total'>
+              <span>Total</span>
+              <span class='carrito-resumen__total-monto'>$62.200</span>
+            </div>
+
+            <a href='checkout.html' class='boton boton-primario'>Proceder al checkout</a>
+            <a href='catalogo.html' class='carrito-resumen__seguir'>o seguir comprando</a>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
+    <script src='src/main.js'></script>
+    <script>
+      renderNavbar('carrito.html');
+      renderFooter();
+    </script>
+  </body>
+</html>

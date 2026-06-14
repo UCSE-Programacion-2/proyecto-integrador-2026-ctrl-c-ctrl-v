@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Bombacha de campo clásica — Prendas Gauchas Demetria</title>
+    <link rel='stylesheet' href='src/styles/variables.css' />
+    <link rel='stylesheet' href='src/styles/base.css' />
+    <link rel='stylesheet' href='src/styles/layout.css' />
+    <link rel='stylesheet' href='src/styles/detalle.css' />
+  </head>
+  <body>
+    <div id='navbar'></div>
+
+    <main>
+      <div class='detalle-pagina'>
+        <!-- breadcrumb -->
+        <nav class='breadcrumb' aria-label='Ruta de navegación'>
+          <a href='index.html'>Inicio</a>
+          <span class='breadcrumb__sep'>›</span>
+          <a href='catalogo.html'>Catálogo</a>
+          <span class='breadcrumb__sep'>›</span>
+          <span>Bombacha de campo clásica</span>
+        </nav>
+
+        <div class='detalle-layout'>
+          <!-- galería -->
+          <div>
+            <div class='detalle-galeria__principal'>
+              <img src='assets/logo.webp' alt='Bombacha de campo clásica' />
+            </div>
+            <div class='detalle-galeria__miniaturas'>
+              <div class='detalle-galeria__miniatura activa'>
+                <img src='assets/logo.webp' alt='Vista frontal' />
+              </div>
+              <div class='detalle-galeria__miniatura'>
+                <img src='assets/logo.webp' alt='Vista lateral' />
+              </div>
+              <div class='detalle-galeria__miniatura'>
+                <img src='assets/logo.webp' alt='Detalle tejido' />
+              </div>
+            </div>
+          </div>
+
+          <!-- información -->
+          <div class='detalle-info'>
+            <div class='detalle-info__categoria'>
+              <span class='etiqueta'>Bombachas</span>
+            </div>
+
+            <h1 class='detalle-info__nombre'>Bombacha de campo clásica</h1>
+
+            <div class='detalle-info__precio-wrap'>
+              <span class='detalle-info__precio'>$12.500</span>
+            </div>
+
+            <p class='detalle-info__descripcion'>
+              Bombacha tradicional de algodón resistente, ideal para el trabajo diario en el campo
+              y para eventos culturales. Confeccionada con materiales de primera calidad que
+              garantizan comodidad y durabilidad. Disponible en colores natural, negro y azul marino.
+            </p>
+
+            <!-- selector de talle -->
+            <div class='detalle-selector'>
+              <span class='detalle-selector__etiqueta'>Talle</span>
+              <div class='detalle-selector__opciones'>
+                <button class='detalle-selector__btn'>S</button>
+                <button class='detalle-selector__btn seleccionado'>M</button>
+                <button class='detalle-selector__btn'>L</button>
+                <button class='detalle-selector__btn'>XL</button>
+                <button class='detalle-selector__btn'>XXL</button>
+              </div>
+            </div>
+
+            <!-- selector de color -->
+            <div class='detalle-selector'>
+              <span class='detalle-selector__etiqueta'>Color</span>
+              <div class='detalle-selector__opciones'>
+                <button class='detalle-selector__btn seleccionado'>Natural</button>
+                <button class='detalle-selector__btn'>Negro</button>
+                <button class='detalle-selector__btn'>Azul marino</button>
+              </div>
+            </div>
+
+            <!-- cantidad -->
+            <div class='detalle-cantidad'>
+              <span class='detalle-cantidad__etiqueta'>Cantidad</span>
+              <div class='detalle-cantidad__control'>
+                <button class='detalle-cantidad__btn'>−</button>
+                <span class='detalle-cantidad__valor'>1</span>
+                <button class='detalle-cantidad__btn'>+</button>
+              </div>
+            </div>
+
+            <!-- acciones -->
+            <div class='detalle-acciones'>
+              <a href='carrito.html' class='boton boton-primario'>🛒 Agregar al carrito</a>
+              <a href='checkout.html' class='boton boton-acento'>Comprar ahora</a>
+            </div>
+
+            <!-- especificaciones -->
+            <div class='detalle-specs'>
+              <h2 class='detalle-specs__titulo'>Especificaciones</h2>
+              <table class='detalle-specs__tabla'>
+                <tr>
+                  <td>Material</td>
+                  <td>100% algodón</td>
+                </tr>
+                <tr>
+                  <td>Origen</td>
+                  <td>San Salvador de Jujuy</td>
+                </tr>
+                <tr>
+                  <td>Talles disponibles</td>
+                  <td>S, M, L, XL, XXL</td>
+                </tr>
+                <tr>
+                  <td>Colores</td>
+                  <td>Natural, Negro, Azul marino</td>
+                </tr>
+                <tr>
+                  <td>Stock</td>
+                  <td>Disponible</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
+    <script src='src/main.js'></script>
+    <script>
+      renderNavbar('');
+      renderFooter();
+    </script>
+  </body>
+</html>

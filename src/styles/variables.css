@@ -1,0 +1,60 @@
+/* paleta, tipografías y espaciados del proyecto */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* colores principales */
+  --color-primario: #5c3d1e;
+  --color-primario-claro: #7a5230;
+  --color-primario-oscuro: #3e2910;
+  --color-acento: #c9a96e;
+  --color-acento-claro: #dfc08e;
+  --color-fondo: #f5f0e8;
+  --color-fondo-tarjeta: #fff;
+  --color-texto: #1a1a1a;
+  --color-texto-suave: #555;
+  --color-borde: #ddd4c2;
+  --color-error: #c0392b;
+  --color-exito: #27ae60;
+
+  /* tipografías */
+  --fuente-titulo: 'Playfair Display', Georgia, serif;
+  --fuente-cuerpo: 'Inter', system-ui, sans-serif;
+
+  /* tamaños de fuente */
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-base: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.25rem;
+  --texto-2xl: 1.5rem;
+  --texto-3xl: 1.875rem;
+  --texto-4xl: 2.25rem;
+
+  /* espaciados */
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 0.75rem;
+  --espacio-4: 1rem;
+  --espacio-6: 1.5rem;
+  --espacio-8: 2rem;
+  --espacio-12: 3rem;
+  --espacio-16: 4rem;
+
+  /* bordes */
+  --radio-sm: 4px;
+  --radio-md: 8px;
+  --radio-lg: 12px;
+  --radio-full: 9999px;
+
+  /* sombras */
+  --sombra-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --sombra-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --sombra-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* ancho máximo del contenido */
+  --ancho-max: 1200px;
+
+  /* transición base */
+  --transicion: 0.2s ease;
+}

@@ -1,0 +1,227 @@
+/* estilos del panel de administración */
+
+.admin-pagina {
+  padding: var(--espacio-8) var(--espacio-4);
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+.admin-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--espacio-6);
+  flex-wrap: wrap;
+  gap: var(--espacio-3);
+}
+
+.admin-encabezado__titulo {
+  font-size: var(--texto-2xl);
+  color: var(--color-primario);
+}
+
+/* tabla de productos */
+.admin-tabla-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--color-fondo-tarjeta);
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-sm);
+  border: 1px solid var(--color-borde);
+}
+
+.admin-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.admin-tabla thead {
+  background-color: var(--color-primario);
+  color: #fff;
+}
+
+.admin-tabla th {
+  padding: var(--espacio-4);
+  text-align: left;
+  font-size: var(--texto-sm);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.admin-tabla td {
+  padding: var(--espacio-4);
+  border-bottom: 1px solid var(--color-borde);
+  font-size: var(--texto-sm);
+  vertical-align: middle;
+}
+
+.admin-tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-tabla tbody tr:hover {
+  background-color: var(--color-fondo);
+}
+
+.admin-tabla__img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radio-md);
+  object-fit: cover;
+  border: 1px solid var(--color-borde);
+}
+
+.admin-tabla__nombre {
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.admin-tabla__categoria {
+  color: var(--color-texto-suave);
+  font-size: var(--texto-xs);
+  margin-top: 2px;
+}
+
+.admin-stock {
+  display: inline-block;
+  padding: var(--espacio-1) var(--espacio-2);
+  border-radius: var(--radio-sm);
+  font-size: var(--texto-xs);
+  font-weight: 600;
+}
+
+.admin-stock.disponible {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.admin-stock.sin-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* acciones de fila */
+.admin-acciones {
+  display: flex;
+  gap: var(--espacio-2);
+}
+
+.admin-btn-editar,
+.admin-btn-eliminar {
+  padding: var(--espacio-2) var(--espacio-3);
+  border-radius: var(--radio-sm);
+  font-size: var(--texto-xs);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity var(--transicion);
+}
+
+.admin-btn-editar {
+  background-color: var(--color-acento);
+  color: var(--color-primario-oscuro);
+}
+
+.admin-btn-eliminar {
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+.admin-btn-editar:hover,
+.admin-btn-eliminar:hover {
+  opacity: 0.85;
+}
+
+/* ── modal crear/editar producto ── */
+.modal-fondo {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espacio-4);
+}
+
+.modal-fondo.oculto {
+  display: none;
+}
+
+.modal {
+  background-color: var(--color-fondo-tarjeta);
+  border-radius: var(--radio-lg);
+  padding: var(--espacio-6);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--sombra-lg);
+}
+
+.modal__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--espacio-6);
+}
+
+.modal__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-xl);
+  color: var(--color-primario);
+}
+
+.modal__cerrar {
+  background: none;
+  border: none;
+  font-size: var(--texto-2xl);
+  cursor: pointer;
+  color: var(--color-texto-suave);
+  line-height: 1;
+  padding: var(--espacio-1);
+  border-radius: var(--radio-sm);
+  transition: background-color var(--transicion);
+}
+
+.modal__cerrar:hover {
+  background-color: var(--color-fondo);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-4);
+}
+
+.modal__form .campo__input,
+.modal__form .campo__select {
+  padding: var(--espacio-3);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+  font-size: var(--texto-sm);
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--color-fondo);
+  width: 100%;
+  transition: border-color var(--transicion);
+}
+
+.modal__form .campo__input:focus,
+.modal__form .campo__select:focus {
+  outline: none;
+  border-color: var(--color-primario);
+}
+
+.modal__fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacio-4);
+}
+
+.modal__acciones {
+  display: flex;
+  gap: var(--espacio-3);
+  justify-content: flex-end;
+  margin-top: var(--espacio-2);
+}

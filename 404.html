@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>404 — Página no encontrada</title>
+    <link rel='stylesheet' href='src/styles/variables.css' />
+    <link rel='stylesheet' href='src/styles/base.css' />
+    <link rel='stylesheet' href='src/styles/layout.css' />
+    <link rel='stylesheet' href='src/styles/404.css' />
+  </head>
+  <body>
+    <div id='navbar'></div>
+
+    <main>
+      <div class='error-404'>
+        <p class='error-404__codigo'>404</p>
+        <h1 class='error-404__titulo'>Página no encontrada</h1>
+        <p class='error-404__texto'>
+          La página que buscás no existe o fue movida.<br />
+          Volvé al inicio o explorá el catálogo.
+        </p>
+        <div class='error-404__acciones'>
+          <a href='index.html' class='boton boton-primario'>Ir al inicio</a>
+          <a href='catalogo.html' class='boton boton-secundario'>Ver catálogo</a>
+        </div>
+      </div>
+    </main>
+
+    <div id='footer'></div>
+
+    <script src='src/components/navbar.js'></script>
+    <script src='src/components/footer.js'></script>
+    <script src='src/main.js'></script>
+    <script>
+      renderNavbar('');
+      renderFooter();
+    </script>
+  </body>
+</html>

@@ -4,6 +4,7 @@ import express from 'express';
 
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
+import productRoutes from './routes/productRoutes.js';
 import { errorHandler, notFound } from './middlewares/errorHandler.js';
 
 const app = express();
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

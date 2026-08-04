@@ -16,6 +16,11 @@ export function errorHandler(err, req, res, next) {
     return;
   }
 
+  if (err.name === 'CastError') {
+    res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Recurso no encontrado' } });
+    return;
+  }
+
   if (err.code === 11000) {
     res.status(400).json({ error: { code: 'BAD_REQUEST', message: 'El recurso ya existe' } });
     return;
